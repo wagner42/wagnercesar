@@ -7,14 +7,14 @@
 return [
     'dynamodb' => [
         // AWS Access Key.
-        'key'      => env('DYNAMODB_KEY', 'dynamodb_local'),
+        'key'      => $_SERVER['DYNAMODB_KEY'],
         // AWS Secret Key.
-        'secret'   => env('DYNAMODB_SECRET', 'secret'),
+        'secret'   => $_SERVER['DYNAMODB_SECRET'],
         // AWS Region.
-        'region'   => env('DYNAMODB_REGION', 'eu-central-1'),
+        'region'   => $_SERVER['DYNAMODB_REGION'],
         // DynamoDB version.
-        'version'  => env('DYNAMODB_VERSION', 'latest'),
+        'version'  => $_SERVER['DYNAMODB_VERSION'],
         // Only used for local endpoint.
-        'endpoint' => env('DYNAMODB_LOCAL_ENDPOINT', 'http://localhost:8000'),
+        'endpoint' => $_SERVER['DYNAMODB_LOCAL_ENDPOINT'],
     ],
 ];
