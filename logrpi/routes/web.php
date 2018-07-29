@@ -12,4 +12,5 @@
 */
 
 $router->get('/', ['uses' => 'LogController@index']);
-$router->post('/', ['uses' => 'LogController@createLog']);
+$router->get('/show', ['uses' => 'LogController@show']);
+$router->post('/new', ['uses' => 'LogController@createLog']);

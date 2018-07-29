@@ -13,14 +13,13 @@ class LogController extends Controller
         return response()->json($log);
     }
 
-    public function index() {
-    	try {
-    		$logs = Log::all();
+    public function showLog() {
+        $logs = Log::all();
         return response()->json($logs);
-    	} catch ($error) {
-    		var_dump($error);
-    	} 
-        
+    }
+
+    public function index() {
+        echo "by Wagner.";
     }
 
 }
